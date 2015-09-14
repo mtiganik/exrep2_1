@@ -1,5 +1,8 @@
 package exrep;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.Test;
 
 public class Main {
@@ -33,6 +36,14 @@ public class Main {
 
     @Test
     public void ex4() {
+        List<Person> persons1 = Arrays.asList(new Person("Jill"), new Person("Jack"));
+        List persons2 = Arrays.asList(new Person("Jane"), new Person("Jim"));
+
+        // käia üle listi elementide ja printida nimed
+    }
+
+    @Test
+    public void ex5() {
         System.out.println(fib(7));
     }
 
