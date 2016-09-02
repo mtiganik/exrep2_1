@@ -42,15 +42,5 @@ public class Main {
         // käia üle listi elementide ja printida nimed
     }
 
-    @Test
-    public void ex5() {
-        System.out.println(fib(7));
-    }
-
-    private int fib(int n) {
-        System.out.println("fib(" + n + ")");
-
-        return 0;
-    }
 
 }
