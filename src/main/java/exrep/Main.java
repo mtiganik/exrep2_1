@@ -8,34 +8,32 @@ import org.junit.Test;
 public class Main {
 
     @Test
-    public void ex1() {
+    public void ex1a() {
         new Company();
         new Company();
     }
 
     @Test
-    public void ex2() {
-        try {
-            System.out.println("in try block");
-            // throw new RuntimeException();
-            // return;
+    public void ex1b() {
 
+        try {
+            // do sth
         } catch (Exception e) {
-            System.out.println("Catched: " + e);
-        } finally {
-            System.out.println("in finally block");
+            e.printStackTrace();
+
+            throw e;
         }
     }
 
     @Test
-    public void ex3() {
+    public void ex1c() {
         // Util.readFromFile();
 
         // Util.readFromWeb();
     }
 
     @Test
-    public void ex4() {
+    public void ex1d() {
         List<Person> persons1 = Arrays.asList(new Person("Jill"), new Person("Jack"));
         List persons2 = Arrays.asList(new Person("Jane"), new Person("Jim"));
 

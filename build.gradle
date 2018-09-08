@@ -1,14 +1,11 @@
-apply plugin: 'war'
-apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+apply plugin: 'java'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 8
 
-dependencies {
-    compileOnly 'junit:junit:4.12'
+repositories {
+    jcenter()
 }
 
-gretty {
-    contextPath = '/'
-    managedClassReload = true
+dependencies {
+    compile 'junit:junit:4.12'
 }
