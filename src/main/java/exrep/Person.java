@@ -10,6 +10,9 @@ public class Person {
         this.name = name;
     }
 
+    public Person() {
+    }
+
     public String getName() {
         return name;
     }
@@ -28,5 +31,9 @@ public class Person {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
