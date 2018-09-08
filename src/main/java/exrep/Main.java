@@ -17,12 +17,16 @@ public class Main {
     public void ex1b() {
 
         try {
-            // do sth
-        } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("in try block");
+            // throw new RuntimeException();
+            // return;
 
-            throw e;
+        } catch (Exception e) {
+            System.out.println("Caught: " + e);
+        } finally {
+            System.out.println("in finally block");
         }
+
     }
 
     @Test
