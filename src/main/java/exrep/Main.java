@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
+import otherpackage.Util;
 
 public class Main {
 
@@ -31,8 +32,12 @@ public class Main {
 
     @Test
     public void ex1c() {
-        // Util.readFromFile();
+        Util.readFromFile();
 
+        // readFromWeb();
+    }
+
+    private void readFromWeb() {
         // Util.readFromWeb();
     }
 
