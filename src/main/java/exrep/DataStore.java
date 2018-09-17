@@ -1,12 +1,16 @@
 package exrep;
 
+import java.util.HashMap;
+
 public class DataStore {
 
+    private static HashMap hashMap = new HashMap();
+
     public static void store(String key, String value) {
-        throw new RuntimeException("not implemented yet");
+        hashMap.put(key,value);
     }
 
     public static String get(String key) {
-        throw new RuntimeException("not implemented yet");
+        return hashMap.get(key).toString();
     }
 }

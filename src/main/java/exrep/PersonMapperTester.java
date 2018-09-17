@@ -6,8 +6,14 @@ public class PersonMapperTester {
 
         PersonMapper mapper = new PersonMapper();
 
-        Person person = mapper.parse("{ \"name\": \"Jill\" }");
+        Person person = mapper.parse("{ \"age\":20,\"name\": \"Jill\" }");
+        Person person2 = mapper.parse("Mihkel");
+        Person person3 = mapper.parse("{\"name\": \"Kristi\"");
 
+        System.out.println(person.getName());
+        System.out.println(person2.getName());
+        System.out.println(person3.getName());
+// "{ \"age\":20,\"name\": \"Jill\" }"
 
                                    // { "name": "Jill" }
 

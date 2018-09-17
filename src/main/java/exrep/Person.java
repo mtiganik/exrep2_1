@@ -1,5 +1,6 @@
 package exrep;
 
+
 import java.util.List;
 
 public class Person {
@@ -9,22 +10,31 @@ public class Person {
     private Integer age;
 
     public Person(String inputString) {
-        System.out.println(inputString);
+
+        // Some checks that input is not in JSON format
+        if(!inputString.contains("{") || !inputString.contains(":")){
+            this.name = inputString;
+        }else {
 
 
-        inputString = inputString.replace("{","");
-        inputString = inputString.replace("}","");
-        inputString = inputString.replace("\"","");
-        //if(inputString.contains(",")){
+            inputString = inputString.replace("{", "");
+            inputString = inputString.replace("}", "");
+            inputString = inputString.replace("\"", "");
 
-        // }
-        String[] inputElements = inputString.split(",");
-       // for(String inputElements)
+            String[] inputElements = inputString.split(",");
+            for (int i = 0; i < inputElements.length; i++) {
+                inputElements[i] = inputElements[i].trim();
+                if (inputElements[i].startsWith("name")) {
+                    this.name = inputElements[i].replace("name:", "").trim();
+                }
+                if (inputElements[i].startsWith("age")) {
+                    this.age = Integer.parseInt(inputElements[i].replace("age:", ""));
+                }
+            }
+        }
 
-
-        System.out.println(inputString);
-
-        this.name = inputString;
+        //System.out.println("age: " + this.age);
+        //System.out.println("name: " + this.name);
     }
 
     public Person(Integer age, String name){
