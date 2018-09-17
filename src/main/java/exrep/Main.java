@@ -12,6 +12,7 @@ public class Main {
     public void ex1a() {
         new Company();
         new Company();
+        Company.staticMethod();
     }
 
     @Test
@@ -19,8 +20,8 @@ public class Main {
 
         try {
             System.out.println("in try block");
-            // throw new RuntimeException();
-            // return;
+             //throw new RuntimeException();
+             // return;
 
         } catch (Exception e) {
             System.out.println("Caught: " + e);
@@ -34,17 +35,29 @@ public class Main {
     public void ex1c() {
         Util.readFromFile();
 
-        // readFromWeb();
+         readFromWeb();
     }
 
     private void readFromWeb() {
-        // Util.readFromWeb();
+
+        //Util.readFromWeb();
     }
 
     @Test
     public void ex1d() {
         List<Person> persons1 = Arrays.asList(new Person("Jill"), new Person("Jack"));
-        List persons2 = Arrays.asList(new Person("Jane"), new Person("Jim"));
+        List persons2 = Arrays.asList(new Person("Jane"), new Person("Jim"), new Company());
+
+        for(Person p : persons1){
+            System.out.println(p.getName());
+        }
+
+        for(Object p : persons2){
+            if(p instanceof Person){
+                System.out.println(((Person)p).getName());
+            }
+        }
+
 
         // käia üle listi elementide ja printida nimed
     }

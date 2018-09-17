@@ -7,13 +7,19 @@ public class PersonMapperTester {
         PersonMapper mapper = new PersonMapper();
 
         Person person = mapper.parse("{ \"name\": \"Jill\" }");
+
+
                                    // { "name": "Jill" }
 
-        System.out.println(person);
+        //    "{ "name": "Jill" }"
+        //    "{ \"name\": \"Jill\" }"
+        //  {"age":20,"name":"Jill"}
 
-        String dataAsString = mapper.stringify(person);
+        //System.out.println(person);
 
-        System.out.println(dataAsString);
+        //String dataAsString = mapper.stringify(person);
+
+       // System.out.println(dataAsString);
 
     }
 
