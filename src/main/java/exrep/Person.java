@@ -19,7 +19,7 @@ public class Person {
 
         // }
         String[] inputElements = inputString.split(",");
-        for(String inputElements)
+       // for(String inputElements)
 
 
         System.out.println(inputString);
